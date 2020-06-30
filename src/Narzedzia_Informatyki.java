@@ -2,6 +2,7 @@ public class Narzedzia_Informatyki
 {
     public static void main(String[] args)
     {
+        /*Adding classes*/
         class ToOsoba {
             public String imie, nazwisko;
             public int wiek;
@@ -28,7 +29,7 @@ public class Narzedzia_Informatyki
                 return nazwisko;
             }
         }
-
+        /*Dodanie klasy dziedziczącej z ToOsoba*/
         class ToStudent extends ToOsoba
         {
             String kierunek;
@@ -44,14 +45,19 @@ public class Narzedzia_Informatyki
             }
         }
 
+        /*Test*/
+
         System.out.println();
         System.out.println("TEST");
-        ToOsoba J = new ToOsoba();
-        J.wyswietl();
+        ToOsoba J = new ToOsoba();  //Tworzę nowy obiekt Osoby
+        J.wyswietl();               //test metody wyswietl
         System.out.println();
-        ToStudent S = new ToStudent();
+        ToStudent S = new ToStudent();  //Tworzę nowy obiekt Student
         S.wyswietl();
         System.out.println();
+
+        //Sprawdzam czy Student nie nadpisał danych Osoby
+
         J.wyswietl();
         S.wyswietl();
         System.out.println(J.PodajImie());
